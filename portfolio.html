@@ -3,55 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kate's Portfolio</title>
-    <link rel="stylesheet" href="Style.css">
+    <title>Portfolio Page</title>
+    <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header id="header">
-        <nav class="navbar">
-            <ul class="left-nav">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="comic.html">Comic</a></li>
-            </ul>
-            <ul class="right-nav">
-                <li><a href="https://github.com/akimoshka" id="gh-link" target="_blank"><i class="fab fa-github"></i></a></li>
-                <li><a href="https://t.me/akimoshka" id="tg-link" target="_blank"><i class="fab fa-telegram-plane"></i></a></li>
-                <li><a href="mailto:e.akimenko@innopolis.university" id="email-link"><i class="fas fa-envelope"></i></a></li>
-                <li><a href="https://www.instagram.com/akimoshka55/" id="inst-link" target="_blank"><i class="fab fa-instagram"></i></a></li>
-            </ul>
-        </nav>
-        <div class="intro_projects">
-            <ul class="project-list">
-                <li class="project-item" 
-                    data-title="Telegram Bot" 
-                    data-description="A telegram bot made for accessing information about companies and current currencies exchange rates." 
-                    data-images="stuff/project_1_1.png,stuff/project_1_2.png">
-                    <img src="stuff/koin.jpg" alt="Project 1">
-                    <p>Telegram bot for sales and currencies</p>
-                </li>
-                <li class="project-item" 
-                    data-title="Future Project" 
-                    data-description="Space for future projects." 
-                    data-images="">
-                    <img src="stuff/TBD.jpg" alt="Project 2">
-                    <p>Space for future projects</p>
-                </li>
-            </ul>
-        </div>
-    </header>
-
-    <div id="project-modal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <div id="modal-title"></div>
-            <div id="modal-images"></div>
-            <p id="modal-description"></p>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
+    <div id="root"></div>
+    <script src="dist/projects.bundle.js"></script>
 </body>
 </html>
