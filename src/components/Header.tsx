@@ -7,7 +7,7 @@ const Header: React.FC = () => (
       <ul className="left-nav">
         <li><Link to="/">Home</Link></li>
         <li><Link to="/about">About Me</Link></li>
-        <li><Link to="/portfolio">Portfolio</Link></li>
+        <li><Link to="/project">Portfolio</Link></li>
         <li><Link to="/comic">Comic</Link></li>
       </ul>
       <ul className="right-nav">

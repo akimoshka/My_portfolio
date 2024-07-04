@@ -24,7 +24,7 @@ export function Home() {
   return (
     <div className="intro">
       <div className="big-photo">
-        <img src="./stuff/me.jpg" alt="Ekaterina Akimenko" />
+        <img src="stuff/me.jpg" alt="Ekaterina Akimenko" />
       </div>
       <div className="intro-text">
         <h1>Hi, my name is <span>Kate</span></h1>
