@@ -5,7 +5,6 @@ import Header from './components/Header';
 import { Bio, Home } from './components/Bio';
 import Comic from './comic';
 import Projects from './projects';
-// import 'C:\\Users\\akimo\\Desktop\\labFr\\Style.css';
 
 function App() {
   return (
