@@ -1,24 +1,24 @@
 /** @type {import('next').NextConfig} */
 
-const isGithubActions = process.env.GITHUB_ACTIONS || false;
+const isGithubActions = process.env.GITHUB_ACTIONS === 'true';
 
 let assetPrefix = "";
 let basePath = "";
 
 if (isGithubActions) {
-    const repo = process.env.My_portfolio.split('/')[1];
-    basePath = `/${repo}`;
-    assetPrefix = `${basePath}/`;
+  const repo = process.env.My_portfolio.split('/')[1];
+  assetPrefix = `/${repo}/`;
+  basePath = `/${repo}`;
 }
 
 const nextConfig = {
-    basePath,
-    assetPrefix,
-    reactStrictMode: true,
-    trailingSlash: true,
-    images: {
-      unoptimized: true,
-    },
+  reactStrictMode: true,
+  assetPrefix: assetPrefix,
+  basePath: basePath,
+  trailingSlash: true,
+  images: {
+    unoptimized: true,
+  },
 };
 
 export default nextConfig;
