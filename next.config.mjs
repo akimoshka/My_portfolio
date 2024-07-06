@@ -6,9 +6,9 @@ let assetPrefix = '';
 let basePath = '';
 
 if (isGithubActions) {
-  const repo = process.env.My_portfolio.replace(/.*?\//, '');
-  assetPrefix = `/${repo}/`;
-  basePath = `/${repo}`;
+    const repo = process.env.My_portfolio ? process.env.My_portfolio.replace(/.*?\//, '') : '';
+    assetPrefix = `/${repo}/`;
+    basePath = `/${repo}`;
 }
 
 const nextConfig = {
