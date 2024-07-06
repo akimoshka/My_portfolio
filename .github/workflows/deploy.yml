@@ -74,6 +74,8 @@ jobs:
         run: npm run lint
       - name: Check formatting
         run: npm run format:fix
+      - name: Create .nojekyll
+        run: echo "" > ./out/.nojekyll
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
