@@ -8,16 +8,19 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "moment": "latest",
     "next": "latest",
     "react": "latest",
-    "react-dom": "latest",
-    "moment": "latest"
+    "react-dom": "latest"
+  },
+  "eslintConfig": {
+    "extends": "next/core-web-vitals"
   },
   "devDependencies": {
     "@types/node": "latest",
     "@types/react": "latest",
-    "typescript": "latest",
-    "eslint": "latest",
-    "eslint-config-next": "latest"
+    "eslint": "^8.57.0",
+    "eslint-config-next": "^14.2.4",
+    "typescript": "latest"
   }
 }
