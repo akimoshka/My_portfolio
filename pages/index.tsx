@@ -1,11 +1,11 @@
-import React from 'react';
-import { Home } from '../components/Bio';
-import Layout from '../components/Layout';
+import React from "react";
+import { Home } from "../components/Bio";
+import Layout from "../components/Layout";
 
 const HomePage: React.FC = () => (
   <>
     <Layout>
-        <Home />
+      <Home />
     </Layout>
   </>
 );
