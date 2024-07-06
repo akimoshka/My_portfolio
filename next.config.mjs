@@ -6,7 +6,7 @@ let assetPrefix = "";
 let basePath = "";
 
 if (isGithubActions) {
-  const repo = process.env.My_portfolio.split('/')[1];
+    const repo = process.env.My_portfolio ? process.env.My_portfolio.split('/')[1] : "";
   assetPrefix = `/${repo}/`;
   basePath = `/${repo}`;
 }
