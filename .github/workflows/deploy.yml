@@ -78,11 +78,11 @@ jobs:
       - name: Lint code
         run: npm run lint
       - name: Check formatting
-        run: npm run format:fix
+        run: npm run format
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .next
+          path: ./out
 
   # Deployment job
   deploy:
