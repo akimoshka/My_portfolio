@@ -3,11 +3,9 @@ import { Bio } from "../components/Bio";
 import Layout from "../components/Layout";
 
 const AboutPage: React.FC = () => (
-  <>
     <Layout>
-      <Bio />
+        <Bio />
     </Layout>
-  </>
 );
 
 export default AboutPage;

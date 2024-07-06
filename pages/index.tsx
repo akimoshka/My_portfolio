@@ -3,11 +3,9 @@ import { Home } from "../components/Bio";
 import Layout from "../components/Layout";
 
 const HomePage: React.FC = () => (
-  <>
     <Layout>
-      <Home />
+        <Home />
     </Layout>
-  </>
 );
 
 export default HomePage;
