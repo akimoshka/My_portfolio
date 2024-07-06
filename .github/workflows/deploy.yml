@@ -1,11 +1,6 @@
-# Sample workflow for building and deploying a Next.js site to GitHub Pages
-#
-# To get started with Next.js see: https://nextjs.org/docs/getting-started
-#
 name: Deploy Next.js site to Pages
 
 on:
-  # Runs on pushes targeting the default branch
   push:
     branches: ["assignment5"]
 
@@ -77,8 +72,8 @@ jobs:
         run: npm run build
       - name: Lint code
         run: npm run lint
-      # - name: Check formatting
-      #   run: npm run format
+      - name: Check formatting
+        run: npm run format:fix
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
