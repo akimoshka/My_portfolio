@@ -6,21 +6,19 @@ let assetPrefix = "";
 let basePath = "";
 
 if (isGithubActions) {
-  const repo = process.env.My_portfolio
-    ? process.env.My_portfolio.replace(/.*?\//, "")
-    : "";
-  assetPrefix = `/${repo}/`;
-  basePath = `/${repo}`;
+    const repo = process.env.GITHUB_REPOSITORY.split('/')[1];
+    basePath = `/${repo}`;
+    assetPrefix = `${basePath}/`;
 }
 
 const nextConfig = {
-  reactStrictMode: true,
-  assetPrefix: assetPrefix,
-  basePath: basePath,
-  trailingSlash: true,
-  images: {
-    unoptimized: true,
-  },
+    basePath,
+    assetPrefix,
+    reactStrictMode: true,
+    trailingSlash: true,
+    images: {
+      unoptimized: true,
+    },
 };
 
 export default nextConfig;
