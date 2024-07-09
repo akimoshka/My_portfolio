@@ -68,14 +68,12 @@ jobs:
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
       - name: Install dependencies
         run: npm install
-      - name: Build with Next.js
-        run: npm run build
       - name: Lint code
         run: npm run lint
       - name: Check formatting
         run: npm run format:fix
-      - name: Create .nojekyll
-        run: echo "" > ./out/.nojekyll
+      - name: Build with Next.js
+        run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
