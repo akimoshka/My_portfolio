@@ -28,7 +28,7 @@ export function Home() {
   return (
     <div className="intro">
       <div className="big-photo">
-        <img src="/stuff/me.jpg" alt="Ekaterina Akimenko" />
+      <img src={`${process.env.NEXT_PUBLIC_BASE_PATH}/stuff/me.jpg`} alt="Ekaterina Akimenko" />
       </div>
       <div className="intro-text">
         <h1>

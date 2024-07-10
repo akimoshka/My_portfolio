@@ -17,15 +17,18 @@ const Projects: React.FC = () => {
       title: "Telegram Bot",
       description:
         "A telegram bot made for accessing information about companies and current currencies exchange rates.",
-      images: ["/stuff/project_1_1.png", "/stuff/project_1_2.png"],
-      thumbnail: "/stuff/koin.jpg",
+      images: [
+        `${process.env.NEXT_PUBLIC_BASE_PATH}/stuff/project_1_1.png`,
+        `${process.env.NEXT_PUBLIC_BASE_PATH}/stuff/project_1_2.png`
+      ],
+      thumbnail: `${process.env.NEXT_PUBLIC_BASE_PATH}/stuff/koin.jpg`,
       alt: "Project 1",
     },
     {
       title: "Future Project",
       description: "Space for future projects.",
       images: [],
-      thumbnail: "/stuff/TBD.jpg",
+      thumbnail: `${process.env.NEXT_PUBLIC_BASE_PATH}/stuff/TBD.jpg`,
       alt: "Project 2",
     },
   ];
