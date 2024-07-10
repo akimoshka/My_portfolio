@@ -74,6 +74,8 @@ jobs:
         run: npm run format:fix
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
+        env:
+          NEXT_PUBLIC_BASE_PATH: /My_portfolio
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
