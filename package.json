@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "next dev",
-    "build": "rollup --config rollup.config.js",
+    "build": "next build",
     "start": "next start",
-    "buildNext": "next build",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "format": "prettier --write .",
     "export": "next export"
