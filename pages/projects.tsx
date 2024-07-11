@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Layout from "../components/Layout";
+import Head from 'next/head';
 
 interface Project {
   title: string;
@@ -36,6 +37,10 @@ const Projects: React.FC = () => {
   return (
     <>
       <Layout>
+        <Head>
+          <title>Projects</title>
+          <meta name="description" content="Projects that I have done" />
+        </Head>
         <div className="intro_projects">
           <ul className="project-list">
             {projects.map((project, index) => (
