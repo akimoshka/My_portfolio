@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import Layout from "../components/Layout";
+import React, { useState } from 'react';
+import Layout from '../components/Layout';
 import Head from 'next/head';
 
 interface Project {
@@ -15,22 +15,19 @@ const Projects: React.FC = () => {
 
   const projects: Project[] = [
     {
-      title: "Telegram Bot",
+      title: 'Telegram Bot',
       description:
-        "A telegram bot made for accessing information about companies and current currencies exchange rates.",
-      images: [
-        `${process.env.NEXT_PUBLIC_BASE_PATH}/stuff/project_1_1.png`,
-        `${process.env.NEXT_PUBLIC_BASE_PATH}/stuff/project_1_2.png`
-      ],
-      thumbnail: `${process.env.NEXT_PUBLIC_BASE_PATH}/stuff/koin.jpg`,
-      alt: "Project 1",
+        'A telegram bot made for accessing information about companies and current currencies exchange rates.',
+      images: [`/stuff/project_1_1.png`, `/stuff/project_1_2.png`],
+      thumbnail: `/stuff/koin.jpg`,
+      alt: 'Project 1',
     },
     {
-      title: "Future Project",
-      description: "Space for future projects.",
+      title: 'Future Project',
+      description: 'Space for future projects.',
       images: [],
-      thumbnail: `${process.env.NEXT_PUBLIC_BASE_PATH}/stuff/TBD.jpg`,
-      alt: "Project 2",
+      thumbnail: `/stuff/TBD.jpg`,
+      alt: 'Project 2',
     },
   ];
 
@@ -55,7 +52,7 @@ const Projects: React.FC = () => {
             ))}
           </ul>
           {selectedProject && (
-            <div className="modal" style={{ display: "block" }}>
+            <div className="modal" style={{ display: 'block' }}>
               <div className="modal-content">
                 <span
                   className="close"

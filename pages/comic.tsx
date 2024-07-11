@@ -3,9 +3,18 @@ import Layout from '../components/Layout';
 import moment from 'moment';
 import Head from 'next/head';
 
+interface Comic {
+  safe_title: string;
+  year: number;
+  month: number;
+  day: number;
+  img: string;
+  alt: string;
+  // Add any other properties that the comic object has
+}
 
 interface ComicProps {
-  comic: any;
+  comic: Comic;
   error?: string;
 }
 
@@ -23,18 +32,21 @@ const Comic: React.FC<ComicProps> = ({ comic, error }) => {
   return (
     <Layout>
       <Head>
-          <title>Comic</title>
-          <meta name="description" content="A page where you can get a funny comic" />
-        </Head>
+        <title>Comic</title>
+        <meta
+          name="description"
+          content="A page where you can get a funny comic"
+        />
+      </Head>
       <div className="comic-container">
         <div className="comic-details" style={{ display: 'block' }}>
           <h1 id="comic-title">{comic.safe_title}</h1>
           <p id="comic-date">
             {isNaN(new Date(comic.year, comic.month - 1, comic.day).getTime())
               ? 'Invalid Date'
-              : moment(
-                  new Date(comic.year, comic.month - 1, comic.day),
-                ).format('LL')}
+              : moment(new Date(comic.year, comic.month - 1, comic.day)).format(
+                  'LL',
+                )}
           </p>
           <img id="comic-img" src={comic.img} alt={comic.alt} />
           <p id="comic-alt" className="active">
@@ -68,7 +80,7 @@ export async function getServerSideProps() {
 
     return { props: { comic: comicData } };
   } catch (err) {
-    return { props: 'Failed to fetch comic' };
+    return { props: { error: 'Failed to fetch comic' } };
   }
 }
 

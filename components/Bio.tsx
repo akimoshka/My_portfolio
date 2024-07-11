@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 export function Bio() {
   return (
@@ -28,7 +28,7 @@ export function Home() {
   return (
     <div className="intro">
       <div className="big-photo">
-      <img src={`${process.env.NEXT_PUBLIC_BASE_PATH}/stuff/me.jpg`} alt="Ekaterina Akimenko" />
+        <img src={`/stuff/me.jpg`} alt="Ekaterina Akimenko" />
       </div>
       <div className="intro-text">
         <h1>

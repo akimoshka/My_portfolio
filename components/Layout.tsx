@@ -1,5 +1,5 @@
-import { PropsWithChildren } from "react";
-import Link from "next/link";
+import { PropsWithChildren } from 'react';
+import Link from 'next/link';
 
 const Layout = ({ children }: PropsWithChildren<{}>) => {
   return (
@@ -27,12 +27,12 @@ const Layout = ({ children }: PropsWithChildren<{}>) => {
         <p>Contact me:</p>
         <ul>
           <li>
-            <a href="https://github.com/akimoshka" target="_blank">
+            <a href="https://github.com/akimoshka">
               <i className="fab fa-github"></i>
             </a>
           </li>
           <li>
-            <a href="https://t.me/akimoshka" target="_blank">
+            <a href="https://t.me/akimoshka">
               <i className="fab fa-telegram-plane"></i>
             </a>
           </li>
@@ -42,7 +42,7 @@ const Layout = ({ children }: PropsWithChildren<{}>) => {
             </a>
           </li>
           <li>
-            <a href="https://www.instagram.com/akimoshka55/" target="_blank">
+            <a href="https://www.instagram.com/akimoshka55/">
               <i className="fab fa-instagram"></i>
             </a>
           </li>
